@@ -4,12 +4,12 @@ class ConsoleBuffer implements ResultBuffer {
   static final ANSI_ESC = "\x1B[";
 
   static final colors = {
-      "black": new AnsiPen()..black(), "red":new AnsiPen()..red(), "green":new AnsiPen()..green(), "white":new AnsiPen()..white(), "yellow" : new AnsiPen()..yellow(), "gray": new AnsiPen()..gray(level: 0.5), "cyan": new AnsiPen()..cyan(), "magenta": new AnsiPen()..magenta()};
+    "black": new AnsiPen()..black(), "red":new AnsiPen()..red(), "green":new AnsiPen()..green(), "white":new AnsiPen()..white(), "yellow" : new AnsiPen()..yellow(), "gray": new AnsiPen()..gray(level: 0.5), "cyan": new AnsiPen()..cyan(), "magenta": new AnsiPen()..magenta()};
 
   Map _columns = {};
   StringBuffer _buffer = new StringBuffer();
 
-  String buffer() {
+  StringBuffer buffer() {
     return _buffer;
   }
 
@@ -45,7 +45,7 @@ class ConsoleBuffer implements ResultBuffer {
   }
 
   void flush() {
-    _log.debug("Flushing");
+    _log.fine("Flushing");
     print(_buffer.toString());
 
     _buffer.clear();

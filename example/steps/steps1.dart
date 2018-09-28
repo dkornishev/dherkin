@@ -1,6 +1,6 @@
 library dherkin_stepdefs_steps1;
 
-import 'package:dherkin/dherkin.dart';
+import 'package:dherkin2/dherkin.dart';
 
 @Given("parser is working")
 step1({out}) {
@@ -46,7 +46,7 @@ i_evaluate_$column2$({exampleRow,  out}) {
 }
 
 @StepDef("I evaluate table with example <column2>")
-i_evaluate_table_with({ exampleRow table, out }) {
+i_evaluate_table_with({ exampleRow, table, out }) {
   out.writeln("Step with table on scenario with example");
   out.writeln("TABLE: $table");
 }

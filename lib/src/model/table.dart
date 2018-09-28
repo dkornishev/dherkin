@@ -1,9 +1,5 @@
 part of dherkin_core;
 
-
-/**
- * Gherkin table
- */
 class GherkinTable extends IterableBase {
 
   final String _SPACER = "\t\t  ";
@@ -27,6 +23,9 @@ class GherkinTable extends IterableBase {
     }
   }
 
+  /**
+   * Gherkin table
+   */
   List<String> gherkinRows() {
     var rows = [];
 
@@ -40,8 +39,6 @@ class GherkinTable extends IterableBase {
 
     return rows;
   }
-
-  bool get isEmpty => _table.isEmpty;
 
   String toString() {
     return _table.toString();
